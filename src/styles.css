@@ -1,0 +1,223 @@
+/* Podstawowe Style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#current-city {
+  display: block;
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 10px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.todolist {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todolist h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.todolist h2::first-letter {
+  color: #218838;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #6c757d;
+}
+
+.weather img {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-details {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.weather-details :last-child :nth-child(4n + 1) {
+  color:#0d6efd;
+}
+
+.tasks {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.tasks li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.tasks li:last-child {
+  border-bottom: none;
+}
+
+.tasks li span {
+  width: 100%;
+}
+
+.task-left {
+  display: flex;
+  gap: 10px;
+}
+
+.task-left input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-right {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+}
+
+.add-task-form {
+  display: flex;
+  gap: 10px;
+}
+
+.add-task-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* .add-task-form button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task-form button:hover {
+  background-color: #218838;
+}
+*/
+
+/* Media Queries dla Urządzeń Mobilnych */
+@media (max-width: 768px) {
+  .weather {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .weather-details {
+      gap: 10px;
+  }
+
+  .todolist h2 {
+      font-size: 1.3em;
+  }
+
+  .tasks li {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .task-left {
+      margin-top: 5px;
+  }
+
+  #current-city {
+      font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      padding: 10px;
+  }
+
+  #container {
+      max-width: 100%;
+  }
+
+  h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+  }
+
+  #current-city {
+      font-size: 0.9em;
+  }
+
+  .todolist {
+      padding: 15px;
+  }
+
+  .todolist h2 {
+      font-size: 1.2em;
+  }
+
+  .weather {
+      font-size: 0.9em;
+  }
+
+  .weather img {
+      width: 50px;
+      height: 50px;
+  }
+
+  .tasks li {
+      padding: 6px 0;
+  }
+
+  .add-task-form {
+      flex-direction: column;
+  }
+
+  .add-task-form input,
+  .add-task-form button {
+      width: 100%;
+  }
+
+  .add-task-form button {
+      margin-top: 5px;
+  }
+}
